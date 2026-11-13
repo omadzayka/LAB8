@@ -34,3 +34,15 @@ button:hover {
     color: #fff;
 }
 
+#status { font-weight: bold; }
+#status.ok { color: #1f5f4a }
+#status.error { color: #a02c2c; }
+
+pre {
+    background: #fff;
+    border: 1px solid #cfd8d4;
+    padding: 1rem;
+    min-height: 6rem;
+    overflow-x: auto;
+}
+
