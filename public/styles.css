@@ -18,3 +18,19 @@ main {
     gap: 0.5rem;
     margin-top: 1.5rem;
 }
+
+button {
+    font: 0,9rem monospace;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #1f5f4a;
+    border-radius: 4px;
+    background: #fff;
+    color: #1f5f4a;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1f5f4a
+    color: #fff;
+}
+
