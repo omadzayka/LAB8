@@ -3,6 +3,35 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initital-scale=1">
-        
-    </head>
+       <title>Web Developing Programme</title>
+       <link rel="stylesheet" href="/styles.css"
+</head>
+<body>
+  <main>
+    <h1>Web Development Programme</h1>
+    <p>
+      This two-year programme takes you from HTML and CSS to building complete
+      web applications. You learn JavaScript, Node.js and how to ship what you build.
+    </p>
+    <p>
+      This page is served by the same Express server that offers the API.
+      Press a button to call a route and see the response.
+    </p>
+
+    <div class="buttons">
+      <button type="button" data-path="/api/courses">GET /api/courses</button>
+      <button type="button" data-path="/api/status">GET /api/status</button>
+      <button type="button" data-path="/api/headers">GET /api/headers</button>
+      <button type="button" data-path="/api/subscribe" data-method="POST">POST /api/subscribe</button>
+      <button type="button" data-path="/api/admin">GET /api/admin</button>
+      <button type="button" data-path="/api/stats">GET /api/stats</button>
+      <button type="button" data-path="/api/does-not-exist">GET /api/does-not-exist</button>
+    </div>
+
+    <h2>Response</h2>
+    <p id="status">No request sent yet.</p>
+    <pre id="body"></pre>
+  </main>
+  <script src="/app.js"></script>
+</body>
 </html>
