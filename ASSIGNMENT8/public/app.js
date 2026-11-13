@@ -17,4 +17,19 @@ async function callRoute(path, method) {
       // not JSON, keep the raw text
     }
 
+
+ statusEl.textContent = `${response.status} ${response.statusText}`.trim();
+    statusEl.className = response.ok ? 'ok' : 'error';
+    bodyEl.textContent = display;
+  } catch (error) {
+    statusEl.textContent = 'Network error';
+    statusEl.className = 'error';
+    bodyEl.textContent = String(error);
+  }
 }
+
+document.querySelectorAll('button[data-path]').forEach((button) => {
+  button.addEventListener('click', () => {
+    callRoute(button.dataset.path, button.dataset.method ?? 'GET');
+  });
+});
