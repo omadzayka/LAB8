@@ -13,3 +13,25 @@ const COURSES = [
 ];
 
 const ROBOT_TXT = 'User-agent: *\nDisallow: /api/admin\n';
+
+const app = express();
+
+let requestServed = 0;
+
+function requestLogger(req, res, next) {
+    console.log(`${new Date().toISOString()} ${req.method} ${req.originalUrl}`);
+    next();
+}
+
+app.use(requestLogger);
+app.use(requestCounter);
+
+app.use(express.static(PUBLIC_DIR));
+
+app.get('/hello', (req, res) => {
+    res.send("Hello from Omadzayka's server");
+});
+
+app.get('/robots.txt', (req, res) => {
+    res.type('text/plain').send(ROBOT_TXT);
+});
