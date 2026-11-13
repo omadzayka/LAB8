@@ -1,0 +1,21 @@
+{
+  "name": "lab8",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/omadzayka/LAB8#readme",
+  "bugs": {
+    "url": "https://github.com/omadzayka/LAB8/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omadzayka/LAB8.git"
+  },
+  "license": "ISC",
+  "author": "omadzayka",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  }
+}
