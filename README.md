@@ -6,7 +6,6 @@
 > (I ran into exactly this error myself).
 >
 > ```bash
-> cd LAB8/ASSIGNMENT8
 > npm install
 > npm start
 > ```
